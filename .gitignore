@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env*
+*.key
+*.pem
+*.sqlite*
+*.pdf
+*.docx
+*.png
+*.zip
+*.local.json
+config.json
+work/
+Literature/
+.paper-workflow/
