@@ -1,8 +1,5 @@
 interface:
-
-  display_name: "土壤论文选读与 Zotero 归档"
-
-  short_description: "筛选土壤高价值论文并下载正文 统一编号整理 Zotero 笔记与 Word 简读"
-
-  default_prompt: "使用 $soil-paper-workflow 筛选一篇与增温和水分变化相关的高价值土壤论文，下载正文 PDF，按统一文献编号整理 Zotero 笔记和 Word 简读。"
+  display_name: "通用学术论文选读与 Zotero 归档"
+  short_description: "跨学科筛选高价值论文 下载正文并统一编号整理 Zotero 笔记与中文 Word 简读"
+  default_prompt: "使用 $soil-paper-workflow 按我的研究方向选一篇高价值学术论文，只下载正文 PDF，生成符合该学科的中文简读，并沿用已有编号整理 Word 和 Zotero。"
 

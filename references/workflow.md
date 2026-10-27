@@ -11,11 +11,13 @@ Python 3.10+，依赖 `python-docx`、`pypdf`。在 Codex 中优先使用内置�
   "paper_root": "./Literature/Papers",
   "pdf_subdir": "文献",
   "word_subdir": "简读",
-  "collection_name": "气候变化下的土壤碳循环"
+  "collection_name": "学术论文选读",
+  "discipline": "",
+  "research_focus": ""
 }
 ```
 
-对于本次用户，paper_root 是桌面的“文献/论文”。与软件安装位置、用户名和磁盘盘符无关。使用该用户已有文件夹，不额外猜测或迁移路径。两类子目录必须位于 paper_root 内。
+`discipline` 和 `research_focus` 供 Codex 选文与阅读时使用；辅助脚本不会从这些字段自动搜索论文。留空且无法从会话判断方向时，先确定研究主题。`collection_name` 必须对应本机已有的唯一 Zotero 分类。使用用户已有文件夹，不额外猜测或迁移路径。两类子目录必须位于 paper_root 内。升级不会覆盖已有私人配置；土壤等领域的个人偏好可以继续保留。
 
 ## paper JSON
 
@@ -25,8 +27,8 @@ Python 3.10+，依赖 `python-docx`、`pypdf`。在 Codex 中优先使用内置�
 {
   "number": 7,
   "date": "2026-10-27",
-  "title": "Example soil study",
-  "title_zh": "示例土壤研究",
+  "title": "Example research paper",
+  "title_zh": "示例学术研究",
   "journal": "Example Journal",
   "year": 2024,
   "doi": "10.0000/example",
@@ -35,10 +37,10 @@ Python 3.10+，依赖 `python-docx`、`pypdf`。在 Codex 中优先使用内置�
   "authors": [{"firstName": "A", "lastName": "Researcher"}],
   "volume": "1",
   "pages": "1-10",
-  "tags": ["增温", "土壤碳循环"],
+  "tags": ["研究主题", "方法类型"],
   "sections": [
     {"heading": "一句话结论", "text": "替换成基于正文核验的结论。"},
-    {"heading": "实验设计", "text": "对象、处理、实验单位、重复和方法。"},
+    {"heading": "研究设计或论证路径", "text": "按学科梳理对象、方法、数据、实验或证明。"},
     {"heading": "主要发现与证据", "text": "关键数据及正文图表位置。"},
     {"heading": "局限与课题启发", "text": "区分实测结果、作者解释与研究建议。"}
   ]

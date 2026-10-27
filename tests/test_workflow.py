@@ -137,5 +137,22 @@ class WorkflowTests(unittest.TestCase):
         calls.assert_not_called()
 
 
+    def test_cross_discipline_and_theoretical_sections(self):
+        for index, discipline in enumerate(["医学", "计算机", "材料", "经济", "数学", "人文"], 1):
+            with self.subTest(discipline=discipline):
+                self.data.update(number=index, title="Synthetic " + discipline,
+                                 title_zh=discipline + "虚构研究", doi="10.0000/example" + str(index),
+                                 sections=[{"heading": "论证与证据", "text": "仅用虚构材料检查归档，不要求实验样本量。"}])
+                wf.write_json(self.paper, self.data)
+                wf.write_json(self.config, {"paper_root": "papers", "collection_name": discipline,
+                                           "discipline": discipline, "research_focus": "测试主题"})
+                work = self.base / ("task-" + str(index))
+                result = wf.prepare(self.config, self.paper, self.pdf, work)
+                self.assertEqual(result["collection_name"], discipline)
+                item = wf.read_json(work / "zotero.json")
+                self.assertIn(discipline + "虚构研究", item["notes"][0]["note"])
+                self.assertTrue(Path(result["word_path"]).exists())
+
+
 if __name__ == "__main__":
     unittest.main()
