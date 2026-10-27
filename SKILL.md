@@ -51,3 +51,7 @@ description: "跨学科筛选高价值学术论文，获取合法正文 PDF，�
 ## 每日任务
 
 仅在用户要求定时运行时创建或更新已有自动化，默认沿用原任务，不重复创建。示例为用户时区每天09:00；时间并非 skill 自带调度器。保留研究主题、全文偏好、目标路径、编号与查重规则；每天执行同样的验证流程。
+
+## 非 Codex 环境
+
+迁移到豆包、DeepSeek 或其他助手时，使用独立的 [prompts/universal-paper-workflow.md](prompts/universal-paper-workflow.md) 和 [docs/DOUBAO-DEEPSEEK.md](docs/DOUBAO-DEEPSEEK.md)。区分普通聊天与本地工具宿主的执行范围；不要将复制提示词描述为已安装原生 Skill，也不要把脚本隔离测试描述为已在这些产品中完成真实操作验证。

@@ -36,6 +36,10 @@
 
 PDF 放论文目录的“文献”，Word 放“简读”。编号由已有文献与 Zotero 核对后确定，不会按当天日期重新从一开始。
 
+## 豆包与 DeepSeek 用法
+
+另附独立的[通用提示词](prompts/universal-paper-workflow.md)和[启动说明](docs/DOUBAO-DEEPSEEK.md)。普通聊天可复制提示词获取阅读与待归档内容；具备本机文件、Python 和 Zotero 访问能力的执行环境可继续使用脚本完成归档。无需原生识别 Codex Skill 格式，具体能力以实际工具为准；尚未在豆包或 DeepSeek 产品端做真实操作测试。
+
 ## 安装与配置
 
 将本仓库下载到 Codex skills 目录下的 soil-paper-workflow 文件夹，确认 SKILL.md 直接位于该文件夹内，重新加载 Codex。Windows 默认位置为用户主目录下 .codex/skills，也可遵循自己的 Codex 配置。
